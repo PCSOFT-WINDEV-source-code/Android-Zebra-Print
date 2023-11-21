@@ -1,0 +1,561 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : COL_PrintConnect
+ major_version : 28
+ minor_version : 0
+ type : 7
+ description : ""
+ subtype : 0
+procedure_set :
+ identifier : 0x1b4216eb004c8f21
+ internal_properties : CAAAAAgAAABGLu41kG7fjQV3iS4F72qmnKaNh5694reolNKIW0iw
+ code_elements :
+  type_code : 31
+  p_codes :
+   -
+     internal_properties : CAAAAAgAAADrvkxGTO9XrGKIWiFF2xaBo6GSbWxV0uxsjoRxhpyuhb2gQx5+j/aLcMqULYFcALUQG/A/RAODfEeexwEeQv5n92W9/dmdHI9HXE2WXFOm+aoE1K/bmB1PRuGGKAahStppGMNSohkaynn8faxiUPVsVkJF2nVQrvz+eDNJdDQavBSKqG7LikgK3mbVnI+xK45mFRS7uBbxg1QWRWv3Xoq49FJMtHM/hz/tL+XJ2v9/dDOZF0nH/qzNZvVP3CkINQOrtq/28F5ci9F4duP5G4UrSUW+u7gWwXRMPkkfyPnN6u72FF8pbRy5QHy/0WPzAU7CBmBqcnMHgsv6+vzudqCmf3GSGawI3+1nKAxEY0g4oDzmZg==
+     code : |1-
+      /////////////////////////////////////////////////////////////////////////////////////
+      //	PrintConnect Component version 1.2.739
+      ////////////////////////////////////////////////////////////////////////////////////
+      //
+      // This component aims to simplify the use of DataWedge from WINDEV Mobile
+      //
+      // In order to work correctly, this component requires the installation of the
+      // Zebra PrintConnect printing driver on the Android device.
+      //
+      // https://www.zebra.com/us/en/products/software/barcode-printers/link-os/print-connect.html
+      //
+      // It is available on PlayStore at the following address:
+      // 
+      // https://play.google.com/store/apps/details?id=com.zebra.printconnect
+      //
+      // It is based on the following 2 java libraries:
+      //
+      // - PrintConnectIntentsWrapper : 
+      // 		A class library that simplifies the interface with the PrintConnect driver
+      // 		https://github.com/ltrudu/PrintConnectSample
+      //
+      // - WindevMobileDataWedgeWrapper : 
+      // 		A facade to Java methods that implements the classes from the DataCaptureReceiver library
+      // 		https://github.com/ltrudu/WindevMobileDataWedgeWrapper
+      //
+      //	In order to compile the project, these 2 libraries must be added to the Android application generation.
+      //	To do so, open the application generation window: click on "Generate the Android application"
+      //	Add artifacts in the step: Integration of remote dependencies
+      //	Use the following information do describe the artifacts to integrate:
+      //	- DataWedgeProfileIntentsWrapper
+      //		Group: com.zebra.printconnectintentswrapper
+      //		Name: printconnectintentswrapper
+      //		Version: 1.2.739
+      //
+      //	- WindevMobileDataWedgeWrapper
+      //		Group: com.zebra.windevmobileprintconnectwrapper
+      //		Name: windevmobileprintconnectwrapper
+      //		Version: 1.2.739
+      //
+      //	Both artifacts are available on the JCenter repository.
+      //
+      // The component is compatible with PrintConnect version 1.2.739.
+      //
+      // WL procedures for printing start with the prefix: ZebraPC
+      // 
+      // Each procedure has two callback parameters. 
+      // It is possible to include in its parameters the names of a procedure run in case of success and a procedure run in case of error.
+      // Refer to the comments of the desired procedure to know the prototype
+      // of the callbacks associated with it.
+      //
+      // If an empty string is set as a callback parameter, no procedure will be executed.
+      // i.e. callback procedures are optional.
+      //
+      // The SET implements the following methods:
+      // - ZebraPCPrinterStatus: returns the current status of the printer in the success callback
+      // - ZebraPCPrintLine: prints a single line of text
+      // - ZebraPCPrintText: prints text on several lines (with carriage returns)
+      // - ZebraPCPrintZPLString: prints a character string that contains ZPL code
+      // - ZebraPCPrintVariableZPLString: prints a ZPL template that contains variable parameters
+      // - ZebraPCPrintVariableTemplateFile: prints a ZPL template file that contains variable parameters
+      // - ZebraPCIDeselectPrinter: deselects the printer currently paired with the device (Bluetooth, Wifi, Ethernet)
+      //
+      // For more information, see the comments of the above-mentioned procedures.
+      //
+      // The documentation of the ZPL language can be downloaded at the following address:
+      // https://www.zebra.com/content/dam/zebra/manuals/printers/common/programming/zpl-zbi2-pm-en.pdf
+      //
+      // ZPL labels and templates can be generated using the WYWIWYG Zebra Designer editor:
+      // https://www.zebra.com/us/en/support-downloads/printer-software/zebra-designer-downloads.html
+      //
+      //
+      
+      
+      
+      
+      
+      constant
+      	
+      end
+      
+      /////////////////////////////////////////////////
+      // Private members
+      /////////////////////////////////////////////////
+      
+      // Temporary variables to store the parameters of the ZebraPCPrintText method
+      // that will be reused in the success callback _PrintConnectConfigureModeLineSuccess
+      // See the comments of the ZebraPCPrintText procedure for more information
+      gsPrintTextData is string = "";
+      gsPrintTextCallbackSuccess is string = "";
+      gsPrintTextCallbackError is string = "";
+      
+      /////////////////////////////////////////////////
+      // Initialize DataWedge
+      if not InSimulatorMode() then
+      	_PrintConnectInitialize()
+      end
+     type : 720896
+  procedures :
+   -
+     name : _PrintConnectPrintLine
+     procedure_id : 1964160373499065679
+     type_code : 15
+     code : |1+
+      public static void _PrintConnectPrintLine(final String fsLineToPrint, final String fsCallbackSuccess, final String fsCallbackError)
+      {
+      	mPrintConnectWindevMobileFacade.PrintConnectImprimeLigne(fsLineToPrint, fsCallbackSuccess, fsCallbackError);
+      }
+     language : Java
+     type : 458752
+   -
+     name : _PrintConnectDeselectPrinter
+     procedure_id : 1964177557664072403
+     type_code : 15
+     code : |1-
+      public static void _PrintConnectDeselectPrinter(final String fsCallbackSuccess, final String fsCallbackError)
+      {
+      	mPrintConnectWindevMobileFacade.PrintConnectDeselectionneImprimante(fsCallbackSuccess, fsCallbackError);
+      }
+     language : Java
+     type : 458752
+   -
+     name : _PrintConnectPrinterStatus
+     procedure_id : 1964183493309012275
+     type_code : 15
+     code : |1-
+      public static void _PrintConnectPrinterStatus(final String fsCallbackSuccess, final String fsCallbackError)
+      {	
+      	mPrintConnectWindevMobileFacade.PrintConnectStatusImprimante(fsCallbackSuccess, fsCallbackError);
+      }
+     language : Java
+     type : 458752
+   -
+     name : _PrintConnectPrintPassthrough
+     procedure_id : 1964189742486703948
+     type_code : 15
+     code : |1-
+      public static void _PrintConnectPrintPassthrough(final String fsContentToPrint, final String fsCallbackSuccess, final String fsCallbackError)
+      {
+      	mPrintConnectWindevMobileFacade.PrintConnectImprimePasstrough(fsContentToPrint, fsCallbackSuccess, fsCallbackError);
+      }
+     language : Java
+     type : 458752
+   -
+     name : _PrintConnectPrintVariableZPLString
+     procedure_id : 1964193659497002765
+     type_code : 15
+     code : |1+
+      public static void _PrintConnectPrintVariableZPLString(final String fsZplStringToPrint, String fsVariableDataKeysCommaSeparatedString, String fsVariableDataValuesCommaSeparatedString, final String fsCallbackSuccess, final String fsCallbackError)
+      {
+      	mPrintConnectWindevMobileFacade.PrintConnectImprimeChaineZPLVariable(fsZplStringToPrint, fsVariableDataKeysCommaSeparatedString, fsVariableDataValuesCommaSeparatedString, fsCallbackSuccess, fsCallbackError);
+      }
+     language : Java
+     type : 458752
+   -
+     name : ZebraPCPrintVariableZPLString
+     internal_properties : CAAAAAgAAAANDnk2R4D4Ke+0zj5kqHMsIsRPLZ5uoodnmdhf55IR1TQM7v0PZwOR05R2Dy6JDcNIVVIdf2DQpaSwOer15JG0t5TNNXXoEku9fk/QOgQueXdcfCpyn+XL6D+7ZselacDKtfeWntKCGa5TvJabzINy79mEANOZcm1n/pqNiuULFp3UV+XntrgK4bVjAhox/9rNcPhwVnpUPtLjPrdQ4jIabucSU+v8DSXLQeFWmnM7F8Bj4Nc=
+     procedure_id : 1964216701995029790
+     type_code : 15
+     code : |1-
+      // Summary: Prints a ZPL template with variable data
+      // Syntax:
+      //ZebraPCPrintVariableZPLString (<sZplStringToPrint> is string, <aaVariableData> is associative array, <sCallbackSuccess> is string, <sCallbackError> is string)
+      //
+      // Parameters:
+      //	sZplStringToPrint (UNICODE string): Unicode string that contains the ZPL code to print
+      //	aaVariableData (associative array): Associative array that contains key/value pairs. Each pair contains the name of the element to replace as key, and its content in the value. The structure of the array is as follows myArray["sMyKey"] = sMyValue
+      //	sCallbackSuccess (UNICODE string): Indicates the name of a WL procedure to run in case of success. Prototype of the procedure: CB_Success(sZPLStringToPrint is string)
+      //	sCallbackError (UNICODE string): Indicates the name of a WL procedure to run in case of error. Prototype of the procedure: CB_Errrr(sMessage is string, sError is string
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // 	sStringToPrint is string = [
+      //		\u0010CT~~CD,~CC^~CT~
+      // 		^XA~TA000~JSN^LT0^MNN^MTD^PON^PMN^LH0,0^JMA^PR5,5~SD10^JUS^LRN^CI0^XZ
+      // 		^XA
+      // 		^MMT
+      // 		^PW406
+      // 		^LL0529
+      // 		^LS0
+      // 		^FT124,99^A0N,34,33^FB160,1,0,C^FH\^FDR\82servation^FS
+      // 		^FO21,57^GB369,61,8^FS
+      // 		^FT17,345^A0N,28,28^FH\^FDDate:^FS
+      // 		^BY2,3,126^FT59,254^BCN,,Y,N
+      // 		^FD>:%CODERESA%^FS
+      // 		^FT18,388^A0N,28,28^FH\^FDTime:^FS
+      // 		^FT104,389^A0N,28,28^FH\^FD%HH%^FS
+      // 		^FT146,306^A0N,28,28^FH\^FD%ATT%^FS
+      // 		^FT18,306^A0N,28,28^FH\^FDAttraction:^FS
+      // 		^FT199,431^A0N,28,28^FH\^FD%NBPPL%^FS
+      // 		^FT87,345^A0N,28,28^FH\^FD%DATE%^FS
+      // 		^FT38,466^A0N,14,14^FH\^FDPlease ar\82rive 30 minutes before the specified time\82^FS
+      // 		^FT17,431^A0N,28,28^FH\^FD# people:^FS
+      // 		^PQ1,0,1,Y^XZ
+      // 	]
+      // 	
+      // 	sAttraction is string = "The little little world"
+      // 	sDate is string = "19-11-2018"
+      // 	sTime is string = "14:30"
+      // 	sNumberOfPeople is string = "3"
+      // 	sReservationCode is string = "RS23158724"
+      // 	
+      // 	aaMyVariableDataMyVariableData is associative array of UNICODE strings
+      // 	aaMyVariableDataMyVariableData["%ATT%"] = sAttraction
+      // 	aaMyVariableDataMyVariableData["%DATE%"] = sDate
+      // 	aaMyVariableDataMyVariableData["%HH%"] = sTime
+      // 	aaMyVariableDataMyVariableData["%NBPPL%"] = sNumberOfPeople
+      // 	aaMyVariableDataMyVariableData["%CODERESA%"] = sReservationCode
+      // 	
+      // 	ZebraPCPrintVariableZPLString(sStringToPrint, aaMyVariableDataMyVariableData, "WIN_PrintConnect.CB_PrintVariableZPLStringSuccess","WIN_PrintConnect.CB_Error")
+      
+      //
+      Procédure ZebraPCPrintVariableZPLString(sZPLStringToPrint is string, aaVariableData is ASSOCIATIVE ARRAY of strings UNICODE, sCallbackSuccess is string, sCallbackError is string)
+      sAllKeysSeparated is string UNICODE = ""
+      sAllValuesSeparated is string UNICODE = ""
+      
+      if aaVariableData..Count > 0 then
+      	sKey is string UNICODE
+      	sValue is string UNICODE
+      	FOR ALL ELEMENT sValue,sKey of aaVariableData
+      		sAllKeysSeparated += sKey + ";"
+      		sAllValuesSeparated += sValue + ";"
+      	end
+      end
+      
+      _PrintConnectPrintVariableZPLString(sZPLStringToPrint,sAllKeysSeparated,sAllValuesSeparated,sCallbackSuccess,sCallbackError)
+     type : 458752
+   -
+     name : _PrintConnectPrintVariableTemplateFile
+     procedure_id : 1964226949787221640
+     type_code : 15
+     code : |1-
+      public static void _PrintConnectPrintVariableTemplateFile(final String fsFileToPrint, final String fsVariableDataKeysCommaSeparatedString, final String fsVariableDataValuesCommaSeparatedString, final String fsCallbackSuccess, final String fsCallbackError)
+      {
+      	mPrintConnectWindevMobileFacade.PrintConnectImprimeFichierTemplateVariable(fsFileToPrint, fsVariableDataKeysCommaSeparatedString, fsVariableDataValuesCommaSeparatedString, fsCallbackSuccess, fsCallbackError);
+      }
+     language : Java
+     type : 458752
+   -
+     name : ZebraPCPrintVariableTemplateFile
+     internal_properties : CAAAAAgAAACStGKYPVn5qTu2OmCffs05HNZneHblxaWp+oR/N9deMoinEVR2uS3zL98IbJGeLLY1zNwZHxgBI3IMW2bJXHy2Kzk11YDZLG01epAktmXVW71vJtaljPjUD2CFcukwPSuICmI4rDUwHImwpKydX9ufaXoHsCsIJghWz/AxFvw9dQD/CGo4k5XDAkM/ustRDAfHi0oDMw==
+     procedure_id : 1964230304156739342
+     type_code : 15
+     code : |1+
+      // Summary: Prints a template file with variable parameters. The file can be printed from the Android file system or from the printer's internal memory.
+      // Syntax:
+      //ZebraPCPrintVariableTemplateFile (<sZplFileToPrint> is string, <aaVariableData> is associative array, <sCallbackSuccess> is string, <sCallbackError> is string)
+      //
+      // Parameters:
+      //	sZplFileToPrint (UNICODE string): Name of the file to print from the printer's memory or full path plus name of the file to print from the Android file system.
+      //	aaVariableData (associative array): Associative array that contains key/value pairs. Each pair contains the name of the element to replace as key, and its content in the value. The structure of the array is as follows myArray["sMyKey"] = sMyValue
+      //	sCallbackSuccess (UNICODE string): Indicates the name of a WL procedure to run in case of success. Prototype of the procedure: CB_Success(sZPLStringToPrint is string)
+      //	sCallbackError (UNICODE string): Indicates the name of a WL procedure to run in case of error. Prototype of the procedure: CB_Errrr(sMessage is string, sError is string
+      // Return value:
+      // 	None
+      //
+      // Example:
+      //	sFileToPrint is string = "/storage/emulated/0/test.zpl"
+      //	
+      //	IF fFileExist(sFileToPrint) THEN
+      //		aaMyVariableDataMyVariableData is associative array of UNICODE strings
+      //		aaMyVariableDataMyVariableData["%PRODUCT_NAME%"] = "Pear"
+      //		aaMyVariableDataMyVariableData["%MSRP%"] = "3$"
+      //		aaMyVariableDataMyVariableData["%PCT%"] = "60"
+      //		aaMyVariableDataMyVariableData["%FINAL%"] = "1.8$"
+      //		aaMyVariableDataMyVariableData["%UPC_CODE%"] = "25796537"
+      //		
+      //		ZebraPCPrintVariableTemplateFile(sFileToPrint, taMyVariableDataMyVariableData, "WIN_Zebra_Print.CB_PrintVariableZPLFileSuccess","WIN_Zebra_Print.CB_Error")
+      //		
+      //	END
+      //
+      //
+      Procédure ZebraPCPrintVariableTemplateFile(sZplFileToPrint is string, aaVariableData is ASSOCIATIVE ARRAY of strings UNICODE, sCallbackSuccess is string, sCallbackError is string)
+      sAllKeysSeparated is string UNICODE = ""
+      sAllValuesSeparated is string UNICODE = ""
+      
+      if aaVariableData..Count > 0 then
+      	sKey is string UNICODE
+      	sValue is string UNICODE
+      	FOR ALL ELEMENT sValue,sKey of aaVariableData
+      		sAllKeysSeparated += sKey + ";"
+      		sAllValuesSeparated += sValue + ";"
+      	end
+      end
+      
+      // We use the source only
+      _PrintConnectPrintVariableTemplateFile(sZplFileToPrint, sAllKeysSeparated,sAllValuesSeparated,sCallbackSuccess,sCallbackError)
+      
+     type : 458752
+   -
+     name : ZebraPCPrintZPLString
+     internal_properties : CAAAAAgAAABijQ5oyM7oCbgo1/kGtOueYZZGio5BNVYyhPxRiSKSA2xhK+IZfJBRgiq2hXYC5UogkGwlXjL5E2yIyQ7U0HQ5oxyauiS2M8q60h7qNM0mVebrQS1FDpu4dFlkprsEXj9LqslrnNF9JnhDkfpjo87zjMpAwV/gg5hTQI/jGBiwnf03b92eyci1owhquh9DpjxeHD8+0fo=
+     procedure_id : 1964807668021993104
+     type_code : 15
+     code : |1+
+      // Summary: Prints the ZPL string passed in the parameters on the printer currently connected to PrintConnect
+      // Syntax:
+      //ZebraPCPrintZPLString (<sZplStringToPrint> is string, <sCallbackSuccess> is string <sCallbackError> is string)
+      //
+      // Parameters:
+      //	sZplStringToPrint (UNICODE string): <specify the role of sZplStringToPrint>
+      //	sCallbackSuccess (UNICODE string): Indicates the name of a WL procedure to run in case of success. Prototype of the procedure: CB_Success(sZPLStringToPrint is string)
+      //	sCallbackError (UNICODE string): Indicates the name of a WL procedure to run in case of error. Prototype of the procedure: CB_Errrr(sMessage is string, sError is string
+      // Return value:
+      // 	None
+      //
+      // Example:
+      //	sStringToPrint = [
+      //		\u0010CT~~CD,~CC^~CT~
+      //		^XA~TA000~JSN^LT0^MNW^MTD^PON^PMN^LH0,0^JMA^PR3,3~SD10^JUS^LRN^CI0^XZ
+      //		^XA
+      //		^MMT
+      //		^PW360
+      //		^LL020
+      //		^LS0
+      //		^FT245,157^A0I,34,33^FH\^FDCHOSHIN^FS
+      //		^FT261,121^A0I,23,24^FH\^FDFocused Mind^FS
+      //		^FT301,90^A0I,20,19^FH\^FDLively incense,^FS
+      //		^FT301,66^A0I,20,19^FH\^FDherbs and clove^FS
+      //		^FT205,22^A0I,34,33^FH\^FD25\15^FS
+      //		^PQ1,0,1,Y^XZ
+      //	]
+      //	ZebraPCPrintZPLString(sStringToPrint,"WIN_PrintConnect.CB_PrintZPLStringSuccess","WIN_PrintConnect.CB_Error")
+      //
+      
+      Procédure ZebraPCPrintZPLString(sZPLStringToPrint is string, sCallbackSuccess is string, sCallbackError is string)
+      sAllKeysSeparated is string UNICODE = ""
+      sAllValuesSeparated is string UNICODE = ""
+      
+      _PrintConnectPrintVariableZPLString(sZPLStringToPrint,sAllKeysSeparated,sAllValuesSeparated,sCallbackSuccess,sCallbackError)
+      
+     type : 458752
+   -
+     name : _PrintConnectInitialize
+     procedure_id : 1998611938266098324
+     type_code : 15
+     code : |1+
+      import android.util.Log;
+      import android.os.Bundle;
+      import java.util.HashMap;
+      import android.app.Activity;
+      
+      
+      import com.zebra.windevmobileprintconnectwrapper.*;
+      
+      
+      
+      public static void _PrintConnectInitialize()
+      {
+      	mPrintConnectWindevMobileFacade.setTimeOut(mlTimeoutMs);
+      }
+      
+      // We implement here an interface for the java library to execute WL procedures
+      // by using the control inversion
+      private static PrintConnectWindevMobileFacade.IAppelProcedureWL mAppelProcedureWL = new PrintConnectWindevMobileFacade.IAppelProcedureWL() {			
+      	@Override
+      	public void appelProcedureWLS(String param1) {
+      		appelProcedureWL(param1);	
+      	}
+      	
+      	@Override
+      	public void appelProcedureWLSS(String param1, String param2) {
+      		appelProcedureWL(param1, param2);	
+      	}
+      	
+      	@Override
+      	public void appelProcedureWLSSS(String param1, String param2, String param3) {
+      		appelProcedureWL(param1, param2, param3);
+      	}	
+      };
+      
+      // We implement here an interface for the Java library to retrieve the context of the application
+      private static PrintConnectWindevMobileFacade.IActivityRetriever mActivityRetriever  = new PrintConnectWindevMobileFacade.IActivityRetriever() {
+      	@Override
+      	public Activity getActivity() {
+      		return getCurrentActivity();
+      	}
+      };
+      
+      
+      // Façade to Java PrintConnectIntentsWrapper methods
+      private static PrintConnectWindevMobileFacade mPrintConnectWindevMobileFacade = new PrintConnectWindevMobileFacade(mAppelProcedureWL, mActivityRetriever);
+      
+      
+      
+      // Members
+      // Maximum duration from which we consider a timeout has occurred
+      public static long mlTimeoutMs = 10000;
+     language : Java
+     type : 458752
+   -
+     name : ZebraPCPrintText
+     internal_properties : CAAAAAgAAAD5qpNZFJsu3rdn4pKglq37dzzdzjU33B/BCDa+0+YXoZ0GBRQjdI+KBhNi5j7A4N+Nm4Qqnf8itOPrjoTERGdYjwYNrD+QCXjyRIttb9l0v50osCihmjH2fvlyWeCMtFx9wIJJgzySrNvWrqR1eznAv/G7Mc43vxjr/RDyg0nNjbqN2MPltnIfx52HqxtMaioRWd0MDh8c9dtjahRt8fIO0gwsgvgPn1pQzmgiimsj8GyQp4doK5Ma9nGF3EGBypdc7R+LyK9TULdOVLk0s/5MSrxVqZRxGUcsnblJXHLI8st5VK2PZfkZuCbj49xtAbSm1kO4KrfgR7mTFmEK+SE6yF61MIkiijSPkJ/3W8BFROFn
+     procedure_id : 1998686159598670712
+     type_code : 15
+     code : |1+
+      // Summary: Prints a multi-line text
+      // Printing is forced in multi-line mode by calling ZebraPCPrintLine
+      // Syntax:
+      //ZebraPCPrintText (<sTextToPrint> is string, <sCallbackSuccess> is string <sCallbackError> is string)
+      //
+      // Parameters:
+      //	sTextToPrint (UNICODE string): Text string to print
+      //	sCallbackSuccess (UNICODE string): Indicates the name of a WL procedure to run in case of success. Prototype of the procedure: CB_Success(sTextToPrint is string)
+      //	sCallbackError (UNICODE string): Indicates the name of a WL procedure to run in case of error. Prototype of the procedure: CB_Errrr(sMessage is string, sError is string
+      // Return value:
+      // 	None
+      //
+      // Example:
+      //	sStringToPrint is string = [
+      //	Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+      // 	sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      // 	Ut enim ad minim veniam, 
+      // 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+      // 	Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+      // 	Excepteur sint occaecat cupidatat non proident, 
+      // 	sunt in culpa qui officia deserunt mollit anim id est laborum.
+      //	]
+      //	
+      //	ZebraPCPrintText(sStringToPrint,"WIN_PrintConnect.CB_PrintTextSuccess","WIN_PrintConnect.CB_Error")
+      
+      //
+      Procédure ZebraPCPrintText(sTexteToPrint is string, sCallbackSuccess is string, sCallbackError is string)
+      // To print text, we will use the intent paththrough.
+      // The latter can be used in text or zpl mode, in order to force the ZPL mode, we
+      /// will start printing an empty line (it will not print anything)
+      // to ensure that the printer is in text mode
+      // The text will be printed in the callback procedure 
+      // executed in case of success: _PrintConnectConfigureModeLineSuccess
+      
+      // We store the data passed as argument in order to reuse it
+      // in the success callback
+      gsPrintTextData = sTexteToPrint;
+      gsPrintTextCallbackSuccess = sCallbackSuccess;
+      gsPrintTextCallbackError = sCallbackError;
+      
+      ZebraPCPrintLine("","_PrintConnectConfigureModeLineSuccess",sCallbackError);
+      
+     type : 458752
+   -
+     name : ZebraPCPrinterStatus
+     procedure_id : 2037999760501240341
+     type_code : 15
+     code : |1-
+      // Summary: Returns the current status of the printer
+      // Syntax:
+      //ZebraPCPrinterStatus (<sCallbackSuccess> is string, <sCallbackError> is string)
+      //
+      // Parameters:
+      //	sCallbackSuccess (UNICODE string): Indicates the name of a WL procedure to run in case of success. Prototype of the procedure: CB_Success(sStatus is string). sStatus is a parameter that contains the current status of the printer.
+      //	sCallbackError (UNICODE string): Indicates the name of a WL procedure to run in case of error. Prototype of the procedure: CB_Errrr(sMessage is string, sError is string
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // ZebraPCPrinterStatus("WIN_PrintConnect.CB_RetrieveStatusSuccess","WIN_PrintConnect.CB_Error")
+      //
+      Procédure ZebraPCPrinterStatus(sCallbackSuccess is string, sCallbackError is string)
+      _PrintConnectPrinterStatus(sCallbackSuccess, sCallbackError)
+     type : 458752
+   -
+     name : ZebraPCPrintLine
+     procedure_id : 2038000082623796536
+     type_code : 15
+     code : |1+
+      // Summary: Prints a line of text
+      // Syntax:
+      //ZebraPCPrintLine (<sLineToPrint> is string, <sCallbackSuccess> is string <sCallbackError> is string)
+      //
+      // Parameters:
+      //	sLineToPrint (UNICODE string): Text string to print
+      //	sCallbackSuccess (UNICODE string): Indicates the name of a WL procedure to run in case of success. Prototype of the procedure: CB_Success(sLineToPrint is string)
+      //	sCallbackError (UNICODE string): Indicates the name of a WL procedure to run in case of error. Prototype of the procedure: CB_Errrr(sMessage is string, sError is string
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      // ZebraPCPrintLine("My text to print", "WIN_PrintConnect.CB_PrintLineSuccess","WIN_PrintConnect.CB_Error")
+      
+      Procédure ZebraPCPrintLine(sLineToPrint is string, sCallbackSuccess is string, sCallbackError is string)
+      
+      _PrintConnectPrintLine(sLineToPrint, sCallbackSuccess, sCallbackError)
+     type : 458752
+   -
+     name : ZebraPCDeselectPrinter
+     procedure_id : 2038000387566545568
+     type_code : 15
+     code : |1+
+      // Summary: Deselects the printer.
+      // Deletes the connection between PrintConnect and the printer
+      // Use this method if you want to change the printer on the run.
+      // NB: When you are connected to a Bluetooth printer and you perform
+      // an NFC pairing on another printer, the old printer will automatically be
+      // deselected in favor of the new one.
+      // Syntax:
+      //ZebraPCDeselectPrinter (<sCallbackSuccess> is string, <sCallbackError> is string)
+      //
+      // Parameters:
+      //	sCallbackSuccess (UNICODE string): Indicates the name of a WL procedure to run in case of success. Prototype of the procedure: CB_Success()
+      //	sCallbackError (UNICODE string): Indicates the name of a WL procedure to run in case of error. Prototype of the procedure: CB_Errrr(sMessage is string, sError is string
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      // ZebraPCDeselectPrinter("WIN_PrintConnect.CB_DeselectPrinterSuccess","WIN_PrintConnect.CB_Error")
+      //	
+      Procédure ZebraPCDeselectPrinter(sCallbackSuccess is string, sCallbackError is string)
+      _PrintConnectDeselectPrinter(sCallbackSuccess, sCallbackError)
+     type : 458752
+   -
+     name : _PrintConnectConfigureModeLineSuccess
+     procedure_id : 2040171682497963969
+     type_code : 15
+     code : |1+
+      // Summary: <specify the action of the procedure>
+      // Syntax:
+      // _PrintConnectConfigureModeLineSuccess ()
+      //
+      // Parameters:
+      //	None
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure private _PrintConnectConfigureModeLineSuccess(sLineToPrint is string <useful>)
+      _PrintConnectPrintPassthrough(gsPrintTextData, gsPrintTextCallbackSuccess, gsPrintTextCallbackError)
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : COL_SansNom1
+resources :
+ string_res :
+  identifier : 0x1b4216df004a61e7
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

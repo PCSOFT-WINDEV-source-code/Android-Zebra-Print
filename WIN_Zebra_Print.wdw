@@ -1,0 +1,634 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : WIN_Zebra_Print
+ major_version : 28
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+window :
+ name : WIN_Zebra_Print
+ identifier : 0x2ceb8d5a039a912a
+ internal_properties : CAAAAAgAAAAlTY/RquujsHWk/emPTAvmqxKbIg14sFK9NR1QFUzJTMe0CPR3HiUh58hQTMNNkvCmvHBjRx/V5n+NFg+1/vgCEYnE7Tp1XJk7TErjN5kt3k3gUL0rb0WjMORjiMp2+82hLHAaEe/O4fPq7zjgWj12bgeeVhIYlR6F4clIoRMRxMHcoRMHGOtQenWyHcosasKKF8kdBymGBXjxC3202EnOWg7IzT96mMKPrGh3/P+okR21OWdIVQW3yo/NAI68+6vGNQL4FrjXsHFY6uavdecFKbdx0qB/VKlF90AGBi4+JQC/JN9jo3kBxVtcW5ISrruQZ7k1+AnKA8iXG3KL0wWwf6kl91QiHd2UxQjG3wNEaKpSuKUYRWE0MQN3Evb+rV3GtzsM9J8061aFDVXwWKWuxv771siRNJm0wjtvl1QlX6xU2pIaeZCDNvzUy93wD/asEyJqmwebGsn2b0NBkw4xtn8rxSBeVbfRR7ZD6A1EZiRD5SFgOxVoro7TanjCgzfo+dPZKzb+zxXYHMsvi8ESmMbZx2jdjRApy8LrAjfagH7NtU06bOxfUCv1lAQd++vdcCGWceFrdaBnZvtiKUlNqQYs2SxIKUIT+LmHfIjV9nNLGMaZJuV4VINHnVmYiIPqjdiMdGpjT97Ulo03YcwTMRQrEdY/g1Qmo1aoY5YwC9FJrmshUNlcmZDsrnjLV1Vvzve9rmeQGSzzWAIxJ9NmvrQoG/jTfWM70LkOkVHR4UHylScHf/DcSdcKmtzj4hsdyU89Kj7UWPvQSAt12K1DjvGub7SDNNafCKj7IjFtmW0wzWH2yM/WUNR160ZGMw5VUxqo2G7zxwp6rwd4/y+gqMgFTGCL/csQhkGs6PejhZ1Mi7I8nOikYjojgbRlUp1xPXkOXqVTefkyXH1tNCDfLoHWBL3uEA2ZnclGoFGGyhsoFTNEDi6tzfCQRn+GMJ0ZvZCyAbRTvOpD4rl1QwPaTeJv3XEzz5EJkJCq4q5CImi5webjQ26t7WTnDvJl0Ve+3j8NWuwJlOcZeqL4t5sPB1qAvSAploAEoHFVZ90BEMgs3bicFcSLIv3mhi/5Mm9RTJYTihamClmRSuk4C4it1ebnAkLLw+ANxiOm7vK/g8O8H9jHQuL7Gfc6jhOPI/i0aNCOcuGWT7nlUSjRZeYKauCFZwSFzxLXlUGV3Vc6Vc3Ae58FcxgoluJRGLCCCFzs/ZD8/s6527mkf0ett9wR09qVL2pMfhuUE6vENtZXNSPWU8lj6rew0G30LqqxjJXSMJZ0i4ph9J9WsrDkTDIX+xTCY2UN5sAMVNQZlA82eVz2KcJm/7CIL5Vh1lz1LN6m/xfVuXmSLeqE6M493W34Cqe3VG6sUK0mm24qrg==
+ properties :
+  width : 320
+  height : 465
+  heightMin : 538
+ controls :
+  -
+    name : BTN_PrintLine
+    identifier : 0x2ceb8d5a039b912a
+    internal_properties : CAAAAAgAAADFEFkerUa093s7cl3dojBemTXRQGRCaykI4EncsCPb0SKm3uK2QgP4MlwBQQqzYLyDqaOp3c1kZvjDVjxBDOXDyTNhOd4uefGrV9xQ/Hiq6DXR9J/BqgwptZGoLj+i+Qse9GnMXgNUEUKwPZKxljF+evZwUsxG8vfvYP49R4bc+o1ud/lMLfM4u/BuqcqNefJrBXCdnsbHI6/tha+ZrxSXKepIaiWMx//6SbBStR+NDn7aTocQrM+HztXr/tTE0fEWa/kQWkQQ3rHhZGmvjkwBoCZXjGVzWycx46oyBrB/RPh2ER3eYlvj9KIKFCOemUL70VM8Q6ZRtRAVguB7dJefyvujBPeGk6bv7YwApC3VATagltwbTVE8c+EbES1cEloRNUEca42N8CZn6iZUmLv5SPQt4W41Ejaa7Z7hubsFlSaAFvs2wtgb6DkCxlYJU4YqQmGFr+tePwzbbOVsmltGKPI3sraAZKKWTt+8B8Sazl0E2ZDXJlJ/YmZGCjmN/fVhxRLAq5XoN6rJlzgvMQ8pGTY/SO288ICXtdXFfWldwMYymf4N0vohdnWCvfa5LqI8ckbUkEusDK/Q8FXwU/3wSUB2NgWeOBYXXcPkm+dbxKCVNg/XJOCEBdjqSQ6ySOuHLUVg3S/kifNd0axUKdZMtkwYCgHRH1n04wttMM9ZiRlXkYwllTQ0fFb26pMum3C0B7ygQ+9zu5lki3n1q1XicNWszO4nEMjj+5fouCIuKnBsDk2Gi/t9HPuK95bVJb8ZwUR80+AY3snTUWydAqunEAhLOOiP3d0CHPO/1AnXTDfWyDEfurA7oTbbviXOqdwfVGlmwJABhExJmCtqNeEqQ2H2cwi9oMoEPi/xCDta7P58PZM5PFkC32WNDgmpBIM5LxpTT1Tx+zRfb6R2nHFOFPpEysUfCItappgyq23Dx5ESmMmcTR8lJD9DpPlUJmWhNENwJyxzTfSjAz0t9OzC0Kn3O0ZftD93T9iDeSXFaL6j+XS86MNeNQ5YQ1jZlwhp4Fw6B8otnzZZG89+lA09zCI+
+    properties :
+     x : 10
+     y : 10
+     width : 300
+     height : 42
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         
+         // Print a line
+         ZebraPCPrintLine("Here is a test line" ,"WIN_Zebra_Print.CB_PrintLineSuccess","WIN_Zebra_Print.CB_Error")
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_PrinterStatus
+    identifier : 0x2ceb8d5a039c912a
+    internal_properties : CAAAAAgAAADUOEGBiv8KK0tsdtHvQQzRMLJRxPT6mzvpVekR46s7oVkqLwtDGT6df8hrg4ierCrVGlquQjpjg8BCMFECZ0ohhpxOtVNxBE/DuTdUoM0pNUI7XvrZV/PNgPGy+QLNgkuFfn3cq8DJpKRxDA7ovmm1Ix+Axl4xBLFv5PDYClAFUp3o2fdgt407Q2MURV+zts8nOkoBjNxDsQIV03mFxVWfGyrZBb59xaPWLQXvy792UFmhPE+wspGo6vrAkUx/eBSl16cg1yl0xtAGELeLOs0Lm5f3ok+tqX33DNZpBRpSVnwN0hCK0rYT6w7DQLSekbdTCmRA9zIonEWo0WgZJRxSZtkNudKJkKFCb51RxYcUdgoD7iLe89T6QhyHoGykiDbRrgAcHzBcyBx6bFpSdU3mGzM7IH3m3wIjC+Kk43jL9zaYwskkpSXEE41910aqC/Ei8O7V59ELqEiK1int64wceh1ndv2aV5gA+MPr7UtHQJ+pjxWslegs15ZRzYZJwa1+VGRWQaHQEezB3A2KMJOnhtRtbJWBTctuuIo3vL7ppYnUx0df8vb9DRwbqSAuFHALC1VXyWMaTTsbLzgq0tJD6hs14bjAMcKZj+GJwbZzxeJVZUEFOULPus7uRuM9qLPDp0YHMmxpo9vCw0GOPH4v34dPhVuUJTo4SH/R3KIVBBnXAUbgslbxY6qqLnxLdWw2LhZHjFTeQfQyEScJqwXsDjYzrNBd4VpJKWqOP/JwsGa5KULkpmmSwlVf/Fc6Td9o27oluKmSsVhZ2WA8tLdgMjRgTPFx5CWX52r80hreRJItVRpQU9X+L9ItVUCvjEOaTV5alemCwMjY9jZGtCHywaH1F2R6s3p4EUG+szOPHyoBD6oZYWyTW7Atbb3fnAvWECc6kRMHvk86FTfQLnizMOE2dLA4k1pGaotoyvkMtTsa+AwPO2rivM/V4pNREqOMqTd9qzB8L9a5BPONEqla/5wxdrsDyN3sCaEm+yPK4ZptG1Gi7BC3UfqAk7lD0M5BaBRrMNExjGEFxxRg2A8lijVOlJiHUKhlICvWoCiaZwxUtxdg3m8MiP97SiRgVcbCqKCIDQmqzkdSrefwp8NQ
+    properties :
+     x : 12
+     y : 334
+     width : 300
+     height : 42
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         ZebraPCPrinterStatus("WIN_Zebra_Print.CB_RetrieveStatusSuccess","WIN_Zebra_Print.CB_Error")
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_DeselectPrinter
+    identifier : 0x2ceb8d5a039d912a
+    internal_properties : CAAAAAgAAAC37fwhpGfyQqyf4IzJBFoVhflNkGZnX47KUpj/paFK7iBq/p5GEfCkUYg9aTydbqFSfDPF2tQahoPbbrmYbD7U6nvYYG6zkFMo6kamQ9kVpzFT6vqcw7IHagDlXjfCrTYc7nVa0+wnK6Vb39U0/O8HB3ya84kdfm6xzVlvE5hnwXBzJSgqL4hhSjbu1SJlW4uhCj9/FVukCFNnkyJJRVVA14vE8r3E8pc22YD0X4/Oo6T70jN2k1I9f0JAC/xvBaRykmJ1PWWBJYHeE/3zE0Hsp5rzWJBsRXsuh/CWG/7inaTvORomr0BTyXfWkDsCNEjHKUXNlfPc8Ke7FLKJEZvBZyIrlv+hpDJ54QH8HFX+4wPtLYRnL6OO+5ocdFEpcauQG88P3RzH8k8Z463xz7u+0LIkN2+u79tCgnxuQpkpsPGKwKMuxP/lCgxZkT9hv6n/huH7MWexL6qx2R1iNsDG3zT/7myFOkWMO3Au74ybeRyJcddNwBSoZR6QZtEp4s4L/zShVicSsV+TYsEJsN6vo4trbAFPdVq7ssK6QBNPEE7r2BjX2UNjYPT57LlDoC9CYQw1cem3hky9BNes2Yd/p7COHqHivht561kk2Nnnf3POjTz/oOPAhBDi8kghtV7zI0GTmF+FoQ6JYXu6mOfB/iYGg0LPQq1lAyugOkKuXHHVFUfYwz3uIxQAOUGFWP+wGUQ9IOuziJkOTlMFfBWu0XGlvaIZwCJ75e4Zb1qx8xI9sn0NnLm8vE6Y+LQICXYGRklHbWSX05bR8H2KM3Bn3+b0xOWSwtWa/SzSZIBrdt14pFE+UMkU69CRQpiflF8Qa748CKBt/mJjN0UCB1ugw9cUn9TOB1D6jAaNTLQ8dRH+dNKFeid3rN+OIwBIj/FquHRlfXuUg+k2P0s+rhCjOLHWQW1eJ5mGqqZAGjpJ337UW92Eyt5IGzR1NfAOYVwajnXpjhzo1kAJ4USgiDxDIQ6yiWY7Z3ug9jR0odlI+A3myo87yURhFRAppdTtldJFCTJxX0JA0/2DxjMsD2IPKdwJZkQ+h7AuFlab4lKvs0oOqa9mhRpNmBBICEhpc0fI93c+/V0KhVXrvc2U/GIB4MMuiXpyH8q8g6LGBe3F7uhKJsYYPdeYhdgn9mE1DDWsh5cHHsTxXurMuCwiyX4rGmuUgZt/MZpHB2P4xtAKLJUF7GviTjYrih5K2sdVtI/8yGhhwWn6+2tj+A1F94kJ0n+P2DPcaXMOPOm88PW3ug==
+    properties :
+     x : 12
+     y : 388
+     width : 300
+     height : 58
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         ZebraPCDeselectPrinter("WIN_Zebra_Print.CB_DeselectPrinterSuccess","WIN_Zebra_Print.CB_Error")
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_PrintZPLString
+    identifier : 0x2ceb8d5a039e912a
+    internal_properties : CAAAAAgAAAA3pCFh5BXr2B7/nVch7nbcqUiLRDCls0af9GXZ9dqy7srpDFU7IeIjfKWHzMwFCqmzXnXWxvZLvB6qKcyMWvHSSqs0EbIEM7nstiZ/GmUFcOXihB7Pa4QbAPvaPLUA6mey621eAgGVnlBPb8m5SN/BB3UAbeWacxKWCqoJABpO/gvh7KrpEc2BBTKj6e2PCYU/9vJyjO64Du/eoidlGhBeCp2N0ElVWvpuYzj7CEMhmvAgCqkXo99x/bdKcqozt7Ime8Um9MMln5Aee6WLvyWozxaUCk3G1kcsw6mj6fHSdmjB74hanIrkNZwEcohGvzH3JjjtJUmkU2Ua3zeYesQutRK6qCqZsLlBxCW0DJy1xTPiNmEUHDw2F1yU6V1QdTK9auVGmRmdnhGHS0M5NGZ9N8tpHzt9upRcCZ4qKoY1L1Ohwew8tFnW6KgF0+NMmmnwc3kII32srob+SOmO3GH73/YHED5tjrjLGFOGldPvH+fgWqg8/WSMHWYflkwNFc1hFkdLDVEwS9c8v3+otymzGk8dXDQ5ob7w72vR5RJIV1SzLWRlwnrQe9jbGEGtbH9kMD+SVc02/DmPA59F97Bov7RlXpb4mTXD8904BoEjtEvaqQIz8dw8/ErUO+zcGnDqSsBSwgq9wMGWlzIReUbSzuoHpoHUgSnCLP0EmVWZTWzefZcU8Fhko8CA/RcoATtPk8CU5JpqcDCYIbq8gDNtG79rLbhPpRe1n0xhuOkoTw/ezYf+SkV/DC0Ds/6z+06PdhQuDrlodDD34Z8viXt7uef01U3RHRj9T6XYuDQ34T5ZWnxqJMFJN6zWu802ywQ2JSt0mVmOUC2b8CkRRNZGTRCoAj08RY/vFNrUHlCOa3xd6vOpg/QXfXxQt7AEsl6yVWByZa5m2gUO9S1KoJb0afAH2wuMmdeinIY8VJACNIAL6Y8cjmPWrOZL2c1tieFfB0bVcOJVGaQu0IZqJs+i1YxLrL64I5v0WalMtxl/18UWsxB0e8lC7/UIgmWDovmtUYnsZDbNA81kmc2vkK4XA+1jyFTmDT3cVzdEr1vWGk+N7J466tOCa8Ob8l7BJAZFTTrN
+    properties :
+     x : 10
+     y : 172
+     width : 300
+     height : 42
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        internal_properties : CAAAAAgAAAA9nicc1d2/kqqbU1X/Q5/3QIaP4U/bROvmX0HZAG4BvEbH/bEGBL5oE6oQ70xAInj9byltLmErzYvGqqRqfundLZmbWMmFCNBS8P49GCAgKk62HDqJ1fXwuuTzyJKttp11UiZGYV2/OjqQMaPcbue4ay4BRgwbs8pp1azMVf/m2b06B5nu+rh26I8ZOIPZNmzhxu4QSVCVM/ErspzA/R4YKQ==
+        code : |1+
+         
+         sStringToPrint is string = [
+         \u0010CT~~CD,~CC^~CT~
+         ^XA~TA000~JSN^LT0^MNN^MTD^POI^PMN^LH0,0^JMA^PR5,5~SD10^JUS^LRN^CI0^XZ
+         ^XA
+         ^MMT
+         ^PW406
+         ^LL0609
+         ^LS0
+         ^FO96,384^GFA,06272,06272,00028,:Z64:eJztmEFoI1UYx9OUQrceNkFyESXtLFg7lz17WLrioSdJazNGcIeC4FlYKD3JVBe36XjYi4sXobu5dDp76EkEEVIDYunJQwc9bNhSCEov2pGAW5OM73vf+968N5mkiXhR+hU26f7n3//83vfmzbzJZP5hFaMB1bnS/jtaPp/P5XMv/gj/5nOOqp34vLaP3CrUpKp9amEF+LGiaB0Da65hZFllsouxdm7pPmsp1k49qGp1+7CKdS/WHiZ95VgzKO9glhXMTIe0bpD0WUXSLoDNZSXzqg9Ia1t9viXSzgyND/ImSQv6fRZpLA0BFyhv82PS6NhycFygrw5qvZqIu/H44CQG5FqXfKvBcYu+L6LWweb57v61w7sEuIPaH3TsHSu4Rd/XUAtN0zAh79u5xsvsgyNeR00Oy+urwVv0vYLamS8AZx+E96dF3hZq8tw+KD1/R54zao2agYSni50bswJwEjXqejlweqtyRFFzie/IiV4gvm3U5CQ5ZkMr/whqJiue14iiuRqfoQwQtbgNik/kmb4APIyiax510On3yfNEzaiJBvI8AuRaL/apfKj5VGf13j0azyrXOnSk1Sp237Y0H2u7iYjvX794lQcDINfiq+HWcqEkfUXhE4DfeNNfUlx1h/vkoTazJn01KBZz0zDuGoYALOq+SqHcTs/z/c9OJs/cAXnsKi/0+0QHnR7hZZN51tK5NSDP8/YOvUF86nUrfTXRQXa9GwSIefZQH9XeEVtkxsijDi40aKXJZot6/4blAZ83Dh91EPkQcDw+f0y+R/z5YfKEf2ShgzHfD+pd6lz3Lapab1rNK+u3t4eqb0/XNiVf07bf07VA9e3q2q9qXkXXWprvT+0xKWSDKvgCa62tDA7+Jn37IU1RuE1s/a7mlVqqr6L7TukahJoPVb61ob64ia6r513mM31T5rEJSnwB862sFFaCdJ/X2Q/rJgL25
+         XU/bDsDfHvg+0TmSb4m47O7pTbdKZK+J+DDO4W7FabkDfD5/DxxmZlX+xc8a1kTt6cOLhlP4NvV+JxLxjPuIOSN3z/f3wrdMfonV9F+vlHyxubzNT6D+td81rLtEfLgqgrZKjN6nkRU84AvGGk8gc8bh48B4mqWymfnc7lcPj0PV0PO5ybzboM0ke7D5UXPAz4AnOCV6vNw1QU+L8lX5trUMF8fH5uk9nIO6pVUH+LNMD6f+CqUx/EyhVTfJvrMZB6bpNYbHG+ozwc+D/PWKQ+HLL1/YjhT+ThebpjPBD6f+CqYV748z+zLY3zHQ3zYhoyfyjdkfnoa347C12zeGSkP7k7EV7mUj3yJ/kXA9/NoeTHf+jrPW87g5TCMr7bbzzdCnqnybQi+5QG+UPGZNzW+n56zI98lH7+/03M5Pk+8htpCFIVskeF7i157fZ0/T4jxLOPzhNwHPAGN+HADinsLGwaU1VOcnwWHP7+g5ovnHuGbcfiOCbUNAGTa56gxnyV9JowC08T8nKl32DJq4B7oI5YHz2dfZSbgp1Dnz2cR5fExMYVvcwb+A7UvWAM3WInrbwonqb6PE3lZfp+YQ61JhXx5bhP7xjPybdKE4SPFtd8AsCLXlwm8JlALkz64Scyj1hZxwXd8fclwXwm1C/I9ognDB4pr3Q0GaMUTpgDfxX463njQBGV8ddQk4FN8+8J9Yv8uNpxyYGA4fbHvj77WAbmP3iUc6ScKf2ZBvg9pahXw4RSaHJi4dkn7CwARkapEWidhYnzyHQufMaJsvNHH721eSsZ5sfYLAVKtxlrfiW7FWlcEBlA4mvE7K1e3PY4U7fsNXgT5pqpFGa0cTUupK+1f167qf1t/A8bLpa4=:FC25^FT114,74^A0N,34,33^FB175,1,0,C^FH\^FDPrintConnect^FS
+         ^FT114,116^A0N,34,33^FB175,1,0,C^FH\^FDDemo^FS
+         ^FO54,30^GB299,105,8^FS
+         ^FT105,381^BQN,2,5
+         ^FH\^FDMA,https://www.zebra.com/gb/en/products/software/barcode-printers/link-os/print-connect.html^FS
+         ^PQ1,0,1,Y^XZ
+         ]
+         
+         
+         ZebraPCPrintZPLString(sStringToPrint,"WIN_Zebra_Print.CB_PrintZPLStringSuccess","WIN_Zebra_Print.CB_Error")
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_PrintVariableZPLString
+    identifier : 0x2ceb8d5a039f912a
+    internal_properties : CAAAAAgAAABH2nNctuLi17IU/e9v5OJK75yz0g8lgw+3rl+brl04FQB7ctVic4+SeZTZMFgOOS3QHw6F75yM6CGGkbC7b0KlugKQmWbdXPsp2/t2Aw0J9upc7YL9TO/HZUJokOOL6rPZEZhoxvEAbwgbtk2MFraA5ITOMKicubDevY+UWwXfB74Qp5B3PQ7cq4pyU5cQN6sAqUpZl6OYgWG15BKI0PhDhTaQXhHZVZW0zY60bp4Fn/YrBPDhHTmVQNzXY39KsZ+Owjecq5aS5MFdJ76SBcg3WZVw4hfiCaEaviBmkrUcxWYQIFr+V8HrLZZdtDS6FQJ5OHUoDz2vqNmUZ2d9YNvWx2rtI8NRWAUgFCXyhcES/keNSBcX51jXWJELGBm4+nXGa5kRg0yqEZ5ytwwiNGLIL+YkBNVtjvaJGzX97bTfLcYLYKE+XyoXkJZ0B8cCEnakY+B3bUihXtMQe4Mdf6KCu9e79UReu1rY7sphVDQbb11YoBUt8n5GjUeea6wGjx8Dr14Kkm5K5njhZqSRp4EA5zoSveo0islqOpBXoKfZS8Noa/laxPAWJ+1ozN+rSRhCSevZJjdWht7MZE+hSokyjscQzV1ISCGPrFeltaVk5vrdyF+2f8WW2jeoQscOsx5pKP1yuqN+WDYY2xduNLp8enaEmPSOXQYbJRXWCv+c/MGRFhFLgd6xjVcXJ6HJAvCCp5TkjBabrX3/J0iEBMIQLh5NAwPUJDpDmkZHGiukU/v0vHHAHvbLAmmp3+avk0iagnswGMmmC0iqrMNmshV57zvimzHOtS4PTq0KCnE/9c6rQLhip6SlsQ3GkCeT7Hn9Y8XEaAcByahTjqAlqn4hzVYrnWV/+K8py/7z5BexLr/jTQ99ZPywaR2tVo4VbnJdWxrJRpD0eNs+vEeabSeQKMN6g/3exe63j72L7x2svKSSn81rt0vsC3txAaz8EuaV0Gc1ERa+9SniRyJZMFuK9/ivUKFdmCDGZ/m4WFEPFMsAkKknMQuQEwq5+JjB+HYeUn0ejrx1VDZRe933OxFwNzcqab1QkqFy2j5GYaiJV3TnOeoL94HYVruWSEMt0o03QcVcrGlFu1L2kDlFsLUuVbBsg3bJd2nOf3tX3PC+fpOr+NB9PGVWU9Wm7UnyERNLQQuefrsR2Wn8Qc0SOI0OatPrABUSU3I009mYPA==
+    properties :
+     x : 10
+     y : 226
+     width : 300
+     height : 42
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        internal_properties : CAAAAAgAAAArIuok/912ZSH6i4Xe1mazwsR6GD0DKhmfzCLIhLM33/yhFS0KuZ8bNCu8QbPmNa7Dx83Lpm+MH4KHi4jJvfvOcNxKIN808oBIiWfaik4huNb7nuaoNJKdcHnIcNSaBR/olPMHSUzA/w0Ho8hl6CpG/awwIErXZDzdfuY/G42kpw==
+        code : |1+
+         sStringToPrint is string = [
+         \u0010CT~~CD,~CC^~CT~
+         ^XA~TA000~JSN^LT0^MNN^MTD^POI^PMN^LH0,0^JMA^PR5,5~SD10^JUS^LRN^CI0^XZ
+         ^XA
+         ^MMT
+         ^PW406
+         ^LL0529
+         ^LS0
+         ^FT124,99^A0N,34,33^FB160,1,0,C^FH\^FDR\82servation^FS
+         ^FO21,57^GB369,61,8^FS
+         ^FT17,345^A0N,28,28^FH\^FDDate:^FS
+         ^BY2,3,126^FT59,254^BCN,,Y,N
+         ^FD>:%CODERESA%^FS
+         ^FT18,388^A0N,28,28^FH\^FDTime:^FS
+         ^FT104,389^A0N,28,28^FH\^FD%HH%^FS
+         ^FT146,306^A0N,28,28^FH\^FD%ATT%^FS
+         ^FT18,306^A0N,28,28^FH\^FDAttraction:^FS
+         ^FT199,431^A0N,28,28^FH\^FD%NBPPL%^FS
+         ^FT87,345^A0N,28,28^FH\^FD%DATE%^FS
+         ^FT38,466^A0N,14,14^FH\^FDPlease ar\82rive 30 minutes before the specified time\82^FS
+         ^FT17,431^A0N,28,28^FH\^FD# people:^FS
+         ^PQ1,0,1,Y^XZ
+         ]
+         
+         sAttraction is string = "The little little world"
+         sDate is string = "19-11-2018"
+         sTime is string = "14:30"
+         sNumberOfPersons is string = "3"
+         sReservationCode is string = "RS23158724"
+         
+         aaMyVariableDataMyVariableData is ASSOCIATIVE ARRAY of strings UNICODE
+         aaMyVariableDataMyVariableData["%ATT%"] = "The little little world"
+         aaMyVariableDataMyVariableData["%DATE%"] = "19-11-2018"
+         aaMyVariableDataMyVariableData["%HH%"] = "14:30"
+         aaMyVariableDataMyVariableData["%NBPPL%"] = "3"
+         aaMyVariableDataMyVariableData["%CODERESA%"] = "RS23158724"
+         
+         ZebraPCPrintVariableZPLString(sStringToPrint, aaMyVariableDataMyVariableData, "WIN_Zebra_Print.CB_PrintVariableZPLStringSuccess","WIN_Zebra_Print.CB_Error")
+         
+         aaMyVariableDataMyVariableData["%ATT%"] = "The gut twister"
+         aaMyVariableDataMyVariableData["%DATE%"] = "20-11-2018"
+         aaMyVariableDataMyVariableData["%HH%"] = "14:45"
+         aaMyVariableDataMyVariableData["%NBPPL%"] = "2"
+         aaMyVariableDataMyVariableData["%CODERESA%"] = "RS56194725"
+         
+         ZebraPCPrintVariableZPLString(sStringToPrint, aaMyVariableDataMyVariableData, "WIN_Zebra_Print.CB_PrintVariableZPLStringSuccess","WIN_Zebra_Print.CB_Error")
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_PrintVariableZPLFile
+    identifier : 0x2ceb8d5a03a0912a
+    internal_properties : CAAAAAgAAABeGpJ7K1nhQVy/zvSzZ71lOHYrz8Xsmx50tJa01yjqz/nG3ivgDeztPwBB25st3fJTjkAF5MwMdiRU/ntBrvtkt0+nAyfynlctNDHQwIdzkNRToLSqd/T/LE7pa5U2mEduZaCNoefJJVJGol+Q3tGZiQVITXZSm9CmzcRUVCwakI6eQJOxmwYPnpzNt+SKrt31ih5rDVxgAVOPKW9wGdZeCbB8bbOtxOHWpTApmQpkeYjIbnedNNutOZj1/P1RNoqqft3Tzv873Maj31G17kdvrZLLhyfKDGk8Fsxx0cGU/pS3aNIaJZ6noMLaAtY1ea5WhuQHKbNUNQ35mEljQ8Wc7Ji3uryKPDT3jMxMCR1NP0w0SDAWRKeZ+V73gMH3l3CpS/jkwLa9fbRqNFXL9B3weFYJ3Ym3OJhEoMj8bZxIYwGcLQ9fEqtYrb7QRHzgmtqMWhTgklInCMjAjxJh7C8A32OOlVdJ/LNtUWLjHTqB0OVCb+5SvhbGbSj0QdMiIxwwILidN+1moMRBaY4qTBQb2yhZkFdmBNtbOKLolj5RodVrYg62KBnfir9+/K1fGlO12z6zygkNmTHa+Zl4lBX9Qv0OdlNIwD3SzaywYd8zjFlKVqRxD4HZtHlBb3AsysStfleqaMiwY9FxtExp5cYemRTo2BdSJMTqTxxwoWGpgY+ccnEE3BkpyaVZa5XGz4mSY/HAhN5n1dDLsISM1GPxMu1A+xTfFGr/ICmTHLnIC2DQGI8eloZUAljwB9LzMYyuRmka0At1sQZE0hNjWSXVdOVV5DbUxxw0V13zwzWi+Xs/hWyiU+vSsXPPFW6lbjnXfarqQUNd4iIVg1qZw/WNb5ZTtGYq6FDY6KBjD57dGJCanuom+xKA2lyjrOkPmxBl/dXT0pNnGpwPUeB/iZik7LgITBm9xtYP+1PRwZLS5q3HXIn0xYfBQyPeilqJDYiB5h7xBJqJtefldbYieuVxooxABCCDyVWWFAEYJtNA6OZzbMWe9/zuB5Lg3E0BH3TIz3oNNoBZcJq+AX9QuBXhqcGIGHe19u30y1Aasv5Lyr9Q7F1ciWlrGACGDdFIGzDViRhQmXCYE8vLfobV+L4ZmUbvX+g/aURzARXGib/r7GF96SneQ/N9zUc4slRdtJDA1MzxSVxowwQ0g6HW6d8oMXCfxhfl3qM7xgYWXsT/aSWpqGw9bp7+1IjTMvtDzdT1VaWbCq3UeqFT86CdWlJFS88=
+    properties :
+     x : 10
+     y : 280
+     width : 300
+     height : 42
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1-
+         
+        type : 14
+      -
+        code : |1+
+         
+         sFileToPrint is string = SysDirExternalStorage(1,ssePublic) + [fSep] + "test.zpl"
+         
+         //Create the file if it does not exist.
+         if fFileExist(sFileToPrint) = False then
+         	sZPLFileContent is string ANSI = [
+         \u0010CT~~CD,~CC^~CT~
+         ^XA~TA000~JSN^LT0^MNN^MTD^POI^PMN^LH0,0^JMA^PR5,5~SD10^JUS^LRN^CI0^XZ
+         ^XA
+         ^MMT
+         ^PW406
+         ^LL0369
+         ^LS0
+         ^FT94,50^A0N,34,33^FB219,1,0,C^FH\^FDReceipt^FS
+         ^FT10,98^A0N,28,28^FH\^FDProduct:^FS
+         ^FT10,324^A0N,28,28^FH\^FDPrix Final:^FS
+         ^FT166,328^A0N,39,38^FH\^FD%FINAL%^FS
+         ^FT11,155^A0N,39,38^FH\^FD%PRODUCT_NAME%^FS
+         ^FT12,197^A0N,20,19^FH\^FDItem code:^FS
+         ^FT12,260^A0N,20,19^FH\^FDR\82duction:^FS
+         ^FT12,229^A0N,20,19^FH\^FDUnit price:^FS
+         ^FT122,196^A0N,20,19^FH\^FD%UPC_CODE%^FS
+         ^FT123,260^A0N,20,19^FH\^FD%PCT%^FS
+         ^FT123,229^A0N,20,19^FH\^FD%MSRP%^FS
+         ^FO11,277^GB388,0,8^FS
+         ^PQ1,0,1,Y^XZ
+         	]
+         	fSaveText(sFileToPrint,sZPLFileContent)
+         end
+         
+         if fFileExist(sFileToPrint) then
+         	aaMyVariableDataMyVariableData is ASSOCIATIVE ARRAY of strings UNICODE
+         	aaMyVariableDataMyVariableData["%PRODUCT_NAME%"] = "Pears"
+         	aaMyVariableDataMyVariableData["%MSRP%"] = "3$"
+         	aaMyVariableDataMyVariableData["%PCT%"] = "60"
+         	aaMyVariableDataMyVariableData["%TC_FINAL%"] = "1.8$"
+         	aaMyVariableDataMyVariableData["%UPC_CODE%"] = "25796537"
+         	
+         	ZebraPCPrintVariableTemplateFile(sFileToPrint, aaMyVariableDataMyVariableData, "WIN_Zebra_Print.CB_PrintVariableZPLFileSuccess","WIN_Zebra_Print.CB_Error")
+         	
+         	aaMyVariableDataMyVariableData["%PRODUCT_NAME%"] = "Apples"
+         	aaMyVariableDataMyVariableData["%MSRP%"] = "1$"
+         	aaMyVariableDataMyVariableData["%PCT%"] = "50"
+         	aaMyVariableDataMyVariableData["%TC_FINAL%"] = "0.5$"
+         	aaMyVariableDataMyVariableData["%UPC_CODE%"] = "25794619"
+         	
+         	ZebraPCPrintVariableTemplateFile(sFileToPrint, aaMyVariableDataMyVariableData, "WIN_Zebra_Print.CB_PrintVariableZPLFileSuccess","WIN_Zebra_Print.CB_Error")
+         	
+         end
+         
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_PrintText
+    identifier : 0x2ceb8d5a03a1912a
+    internal_properties : CAAAAAgAAACw2nZybK8cgDGABQj1r3XkA2ibFGCm0C4vdYni7RfXf3LoWsyyPEObfiq7hq1i+Uxzqo3VAj9RTz91iy0SOiVuWmy5fL8LxHu6tz4y3Fy86tMaFVHVZ03h0tIk2joUVEpISlZ3lzCl1mtsvDMzlm8GFQ83m1HwJT3Go12NFWmMjOICvlbBnlvXfbU7kq/NYh6J16BnOzn7SfnPMxXv9vLN7xmo/nx1e80lImuh+9LwEKxR2gYHm5GTuDSeDXnkEzlkjMMSo8Kk0TEEpd7115tZPzM1OZu6UYuu3ZQKfYPRfLfOldgumufa/JZjP4TTej1V/VUPNmijNxs3jMpGaDnn093r6RRO376gUgzIBv+hBZNulqdpsSNpj7CuYx2qssxZsFLzPB3LwCri8K40bu3n6Bb5q1dC//8cgROqWb44UxKUpj4vVgq+9qHvSHVUS9aspgF24YDhk1cBM9ZgCJS273ywZPx0jt0Mkzd07Hym4xbzoCHXMczXmO9h3DIbHycntEW3fdh5Fj4iLSQ5eQO0IvWKEhgC6v/fD68Rm+3p/5ls1m0YayJGUS5qANJZC8NxYfArryFRugs62dEAxaOiGrjDrb+fmMPtAbnZUh09xbkFlnrqgml1inrXxghYS5ZoEr4JVHl0M4QHBqVj0jK837feX5sgfTRTvd4SMj/okAJVAh1QVCPG6DHV4gE8q0qv3v5k4+x2303t49KbHl3xHfmDTAlofHZUZHU7NsIWJM3ZbKf/MrFscFkgPJ6PZYBamVJL2r1DLfFTq5/GY13GSi1mtVlhc5RZVCGIWcTRsQREf/f4skfOu4h6cosNnLORUt7yWdPgiNqn4Xg9pFcY+QuH4bCk1WN9WyV9lw54kb3KGbsmjQiqBO5RY/QpoXaBG/Ao6PLFQo+O76gmKc0emrdFRT6rV48VVPi5tfTEtIKqtcWLv9wN4S7LKVAftPFFvvYxVMLDow7NLLvCPdjf9qsY4gVpAUG/xWVV59mzCUR/hXAMAhvOfyswTl0GbeyLPzJiI35FWDZL6LEhGJ5uVEdJD9bqKQ==
+    properties :
+     x : 10
+     y : 118
+     width : 300
+     height : 42
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        internal_properties : CAAAAAgAAAC0diAZjf6OdGNwor9a1hKzsI+Yxpu3W10dtWIE+LaJQLkz+Koe+H+HgDwXwvoyngqDwGuUtsDMQ5C+kufqWL5znqKFPjxQn+Uqiola8DW2k8L/k6pnSN9CcMDQ8nDvOI4oJBgrRGZNKIFr3clY5q7WkoiTPlRg89n6lHPbHw==
+        code : |1+
+         
+         sStringToPrint is string = [
+         Lorem ipsum dolor sit amet,
+         consectetur adipiscing elit.
+         
+         Fusce ultrices consectetur sem, vitae lacinia enim blandit nec.
+         
+         Vestibulum sit amet turpis massa. 
+         
+         Aenean maximus nisi a ex consectetur scelerisque.
+         ]
+         
+         ZebraPCPrintText(sStringToPrint,"WIN_Zebra_Print.CB_PrintTextSuccess","WIN_Zebra_Print.CB_Error")
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_Test_print_functions
+    identifier : 0x2ceb8d5a03a2912a
+    internal_properties : CAAAAAgAAAB9eFN3H4mdD4SVF4WLiuIavMgDRTDlAUUSv9Ia+xmCpzRHYN+lCMbdUmsmXsp8Bd3yX1SWp2x2ULGylLm7olphX0LZKCjcRRkV/Cg2HdKvNwBkU13O+0tDoz71aWrm8T4IrXPgYV3CwucpwM4pZe8opS4fdjfyzaMa0+H6zn+1zBp56cplREfj+ZppGSeA6ODejX1yvkyAYv9lZybIZyPhnubTMYDXacy/GLiVmzko6APpt+bzxjb/8zzZQeOmOSgXEHdU7DQLPpvrYzRdOrNIGdJQFtz1d3tl5AQ/9bfdpqPZbtTwwrVZkF20m84A+yhyof/q9BQ4+c5QODBRyKFiWIFAf5cpAjt7ey0M9Fj3Ylmp5Ax2HH5OPj5N9gfL73wyjMka4CfdF6XDDxL7EQgRcsaTsIWX8W3i5kjVDe/jCkVWQsCcJHmcbCQo/iEceSkbKU+ROlRxedUN6nc+643OzmpbpcAzpIFBwtBRl1UAGLtxydmG3AfQ1HthnThUOqNKFSPLa080qgtkXsSOFzu+e9dsVNF401Cq5LGCdFwfIUA6bsbO5CLHpEOlsMOsDTeT25C62sG5LqNfWyYMCxGeI8OiGpLCvtMGaOoJLRWWn/kGLs98Ob8+qEDDUd//oIpM02BmzFaDB0wVI9xCHsW22iTG3vYAkED/XMESkRoRIy0gQdEyNF/nTU8Li70QmeCOjRmxlydwadFimaUBRhmS2cTKykjVX/NnoKWUsLzJ0JPN0484Roo3/idcLM3aYYXA5lrGx1NfW8bdSrrgfgangPiXHJl+Xkt7RJq9BPUi/ysYM2LWEM7xZ2+WcN7/hnw0Cu/NSYy8rKhAn8hVkEZxsezGRLhlWNMYvgvWn2HwX/X1FGqQATfL6gmsrzoPUJt4SpWhHFtpTW7anstYpY/W4K3MR3oKcThKi4MR4WdMNccnm4yzjZuv6AXcG2SNd6xKLxDFCZZu5f3ivWNPQcqaG0n46Fg=
+    properties :
+     x : 10
+     y : 351
+     width : 300
+     height : 48
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1-
+         
+         MyWindow..Plane = 2
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : STC_This_example_presents
+    identifier : 0x2ceb8d5a03a3912a
+    internal_properties : CAAAAAgAAAB8oFH/YkgaMuHu4CSMotYghc1u9seRHAC6HdfBng8nKG60CxjFkZ75R7LO0hle0J+j+I2xJk3IjP/UsTETLNB/Zy9q76RCaAfHcvCfP93IT42+sNHeg1qjES7QY62DpwKGS1WyLoBXgIqaw9JFUImQ1gTuv5GK43sTqAZjYJGPqpZL5Th2rq3Uze1cBxQODFODRR1CFXIm/d0lm/BbP+NBZP0VAa/eoE481JoaykItSxR+i6cSpluxK88OVsM0MJScW/4PD2U6HGft0R2p+ew37DQGIamgpl4HDx1PdTH0JerLG3cJ0EHiryeRzAAuIwfuUUc379fZ80qXKTZ980M/dzR5hAuPA7YrLhv4ugDxZ1EhMaDdDW+oQZgOR/e2vE3O6UU/EGG8H5WkSgvSQaTahy6VTEBsZRDm9OCirK11Hs8qHEv5lo2HPqXXMykTOxnJtHU+Cwrz2xjxUPhYpX2wYUC9BMXbPcw5Pczaag3ah6hdgrLAQN/LJVo6WuhFtbhB1OPXPvfAIcqTexBd1Kk5vOlBHFLqo71wwPZ+rLqKemhxnShatWAIHVatzj5iTnH5aFfYUVef/xxiIh3B+3f3/1iFsSB1mqgm5R7DRXqhNFaxVIh3ALtFk2iNEdLXQRmWGTkdtoJ8UGfgqQsVGQTcKlA34qCoyMruj66T/cpekdVlZSoSl/vaO6kthpa7qNKyxYYsOBVSoNgtp3xIx9fpuJPOXPvbtrbbIt+cbT65TzvJ4ZhbyxI0oSRtwUYb0oxLKix8Fd0dxuh69OXjfYOsmbLTyJ9ufBUgeaZCXv6sQMEl+f4=
+    properties :
+     x : 10
+     y : 11
+     width : 300
+     height : 280
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+  -
+    name : BTN_PrintConnectAPK
+    identifier : 0x2ceb8d5a03a4912a
+    internal_properties : CAAAAAgAAABW4lUEIsVU64e+KVibNxD/ioOXgnDU+ufO92uUVVjhJaKANj+/yh1ijUtHTUFWQXD8DKkZslOv1HGkNB/0/a10ySuS2p3r7S7xzB6KHCwYOJNuOmzD7hwDzhGRGqsak+ny65mvQVRZXM0LfRkilrgz32hJ2UqTewmAuStunSjxDRVfU7fSmRM67PrZ1Qjos6zg43rZVmTeJWC0nTSuD7VLIC55qrPuvOLcagoFV874zXx6yvWm6vQfFGsVWxng4lId+hogCfCS//mCwXKcTbeuaVUkZIsEzffsjKb+6Rbk6bzLhzUH9VYpqDehp4iLMnaeQzDVsAOi2rQbmFDLSYd6pAeGCyXDubtR1VuYfBSgtg71AsFHGo93cJUrPffCwFK/fpCJa3uh2bMJM8/nE2l2tUC6BGANvAm8LJoZtHbzoc059NDiVGAPha8iI8Uc5GaqWY5P+SoVWaXSgHAdfGQlK/znfLAUSnmIS9JMPYp3jpIc+W6IkLGJVgUK8ppEAEm9FIW/gmnPp7AVIe1HPWJ6glBwGhWuJm+7lVRHIy04URG0DthI2QdYROe1mMW8HfrxxBcgJUXysTbTrCcSfrdkA0zi1NqLltFSzTFRN4jrM6T/KDQoCoqVpRaodpHYQtesqxNZh0YhgLptXgcgwMnhuLfhTeg4PTFjHKhUJb2q2Th3oe2bibeQQO4bAzagNml2E3Meq7bHjkAE+lMuIAGYg3IFoU7fNzlo3ZOzGqwhOxMpGIcLsDaYdeUhKU81dOPWLvxWD+foweMC575b0dTa7akLUSNAO6i4kH+IJLBZRZWsUlscNxyfcq/vID758jdUy/ymP2MwlLzNRY+Oys0GTaVCWgmFK1rcW5kG1etVh10ML3K1RbBEYoeB0CFu/2Ea3SMhIY4B2FhY+qhxgMMShm+S108oMX2bb3sJmryLxyF0fDYp4vXKEKnqpoQHuVFurLjtQp4mDyznH7QyItO8xW4QS5j/4ISziEOPmMl7vuG+3mZfyd6xiQpyi5dlJqDvQhD+DkO9sMG/KuUp/vdxnUxD4H0T6CTo4osFknHbGQZ+JGnSGG61DQ0Fsfv5jPPz8AIwC34cORFmm4l04xKo2JN0RpYKJ/1vR4zldGRLXLIaWe9B8iR8mi11tn1zgH0VmLN6Cl6NV/UhYHx73J2hER/5/RWyryU8E0TK6h9X2A==
+    properties :
+     x : 10
+     y : 287
+     width : 300
+     height : 48
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        internal_properties : CAAAAAgAAAAkI9BOoSGWiEfmCw5+g8zrL6DFOchRpGbNs28b4UO+S1M4MC0h4adn0pKT0cH+32iTYBujJ0v37tViEJu9xuWJcr2gjXisZXqDI9B2U2aD6wgnWhPjsy91HY8tnEJ1oEekayndLGtO1xT9FQ==
+        code : |1-
+         
+         // Open Google Play Store
+         ShellExecute("https://play.google.com/store/apps/details?id=com.zebra.printconnect")
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_PrintLineBreak
+    identifier : 0x2ceb8d5a03a5912a
+    internal_properties : CAAAAAgAAADZUrtnGxC5Ed3bWNMGp9K+QUzPRcpgN2fNOws3jd1Q948TY8F1BVa0Gu8pcmvAsQMFfe5TAs2EbZ7OfaeL9/6dqLuWQDGkGADLlmwGla7o5FkA3W36qViWbyH8Na5Z3WPLxdY+TLbIvmN6Jm5q40J8XKNqh57fF24sJ0yubbgXIsFKftoluC8727CAoXx8PhKn2rn0eaw+DidZbE4o0kG5mK07p0x5NDamM3uWnMkSLiAiBN0qd7+5Atx3jueCeQwK14Y0RFA+UpqZ2Y1LZwq1UQNmvIrzcusf0qgIiRaCTxxXddZWB6wRW5X9e4Ge77Vyc9ladE/htt0+zET9JZrtOfcBMidN0mhU/GuWqyucIebTyfJSlGs4jGpJ9HiuKOZSOaq0W9Jv2JOet8MMzUVQF2tpUf4ARiYNTSK0Hrhnjt2ymTMoptt4PCSNeQzCG455hRKRMlIMLfNWdw3DnewvRZI5S3NUltK3QpSGEIAI/DhB5581WfXYVkZmE+zGp2yKTlYxgEkfI4fD+ZxRSv0CGStkuVNio/fYm58Sq/qUuLs0c36j5LBiWMLQOml0TA1saJI6pFtpna+HKbXZ2JvrCxasm8A81R1OjcVDybxnGUhLiOGK71arC8caEQW0Xihdq/V3unHoDPZQfE6YVLNXK+cahKf3wshg4/CBtkmNa/83GZyl/M8HZPzb5JpIPxrRzoMZyLOR5LC+8w+y9bE2wIBecr4bkIllKH5k4WkJ/wZxqsABth/FpRW0ZLwTWzHW3VfNlDdZOkK5Ee0SAde8tNXj2TU2kb9DK11Mmh8UqnrZ8Xb68p79FINObWuHY0vzCQLYi9u5SFtYSIdjp0+/TUABIDw9kpiwzTFkGcVc1om0rTDMyj80oZe0pfKDieJqD7gfGwowvi1fRuw+0m+FmJznePXtUxQtgTMI+VR6bdiRuJZkobT4TmDrd0OrN5cGT0rRAMkFLsSoa25IR/hEVDjwI6Dd5bXsS+ctAXPZoqoqaCxb6GTQBxdKqJSfkN25FoRJbVDlLdjjEXlWInIGxKkdZSa9
+    properties :
+     x : 10
+     y : 64
+     width : 300
+     height : 42
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         
+         // Print a blank line
+         ZebraPCPrintLine(CR,"WIN_Zebra_Print.CB_PrintLineSuccess","WIN_Zebra_Print.CB_Error")
+        type : 18
+      -
+        type : 161
+        enabled : false
+ actionbar :
+  name : ACTB_ActionBar
+  identifier : 0x2ceb8d5a03a6912a
+  internal_properties : CAAAAAgAAAA1zwDenv1DLccBvWKdPvNuhEfyXztCMCQxcKJIdzHgY1IwS+XXEnii2GbyLsGWWucjB7GNLLNAzk1WSNXyH6pcuHT1p3vHXFzgbGp4gL2hcID3Fis9P2OdeqfdxD6RWM7z5eG7gpLmLkyMfQzgKwBm64r6wzGM+P+UGmF3CqL4bXEuwUsyPDvwVxFEeYb5ErVyE/SFySpqHVgq2u1oEt+rUcA8KhOPVgTEWSl+3IXhvB8/7RjMtC+DzTS3KXX7myWCxM7kN/7eDwctnyVcXMIF+gdYHmgPSI4TAXGkauewLpZksXrygrAVI0JGqfy6ULg/XVB0tOkKJB01ywrErinVpa2IBBpubUCaUUEfTJKo0gIZB2c+7WmFOkb4GL81ZWD65Nl1KfWJbxWI6fI=
+  controls : []
+  code_elements :
+   type_code : 125
+   p_codes :
+    -
+      type : 229
+      enabled : false
+    -
+      type : 239
+      enabled : false
+    -
+      type : 240
+      enabled : false
+ menu :
+  name : _Menu
+  identifier : 0x29f8144500a4e5ba
+  internal_properties : CAAAAAgAAADgMVTORwj2Mt8z/R5WRL0mTVIMDO11ij5YdBwcO3ZAw8tWdEBL95DgWGGgMGBRKql5dANp5Vg/qpNyJvJQ8sIrr6GzC+masJIwyV5P7DpW0go2kGsf4EvdW1eqlu6V7I5EHVrMjd02cTaXwP0dbd1DSbdsd/Wxk0ScMGI7Z0eDsGOMLRfieoTYskOjcLtA7tgFoR24z+3d3zH3Bloaoqj6XKllvOzqHQUKs5ikiJtsiZpXF9leDIYykRzjnC4k4qQVjthAFpugw+diG+HfnEMv+L/rU3DRjlIiDq+0aeUP
+  options : []
+ languages :
+  - en-GB
+ popup_menus : []
+ message_bar :
+  internal_properties : CAAAAAgAAABKff4sxysR+9kg8GIJ708iDvb5GJxqytSUKL54fomJ9xlu42EWUFv/+en+BSQDmdB2krqVslwL/1eyQDVw8sffQk7lF3aDfZNzV/+zROsnKAy1jaSejRR5UgML
+ code_elements :
+  internal_properties : CAAAAAgAAAA6IS0ZbTci69I+2S/CYJedbnHGjSRnzzqe5mQXOroOQh783Rz6M/I1kijfT7agwq5x1LI9BwIaYNcq0ofdmVSFyjI4
+  type_code : 1
+  p_codes :
+   -
+     code : |1-
+      Procédure MyWindow()
+      
+      gsTextStatus is string = ""
+      
+      
+      MyWindow..Plane = 1
+   -
+     code : |1+
+      
+      
+     type : 234
+   -
+     code : |1+
+      
+      
+     type : 165
+   -
+     code : |1+
+      
+      
+     type : 177
+   -
+     type : 180
+     enabled : false
+   -
+     type : 230
+     enabled : false
+   -
+     code : |1-
+      
+     type : 40
+   -
+     code : |1+
+      
+      
+     type : 2
+  procedures :
+   -
+     name : CB_Error
+     procedure_id : 2083914670294208810
+     type_code : 14
+     code : |1-
+      // Summary: Procedure run when a PrintConnect method returns an error
+      // Syntax:
+      //CB_Error (<sMessage> is string, <sError> is string)
+      //
+      // Parameters:
+      //	sMessage (UNICODE string): Message associated to the error
+      //	sError (UNICODE string): Error that occurred
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // CB_ErrOr("An error occurred when retrieving the Status","PC_NO_PRINTER_SELECTED")
+      //
+      Procédure CB_Error(sMessage is string <useful>, sError is string)
+      
+      Error("Error while running the command","Details of the error: " + sError)
+     type : 458752
+   -
+     name : CB_PrintLineSuccess
+     procedure_id : 2083914670294274346
+     type_code : 14
+     code : |1+
+      // Summary: Procedure run when a line is successfully printed
+      // Syntax:
+      //CB_PrintLineSuccess (<sLineToPrint> is string)
+      //
+      // Parameters:
+      //	sLineToPrint (UNICODE string): Content of the line that was just printed
+      // Return value:
+      // 	None
+      //
+      // Example:
+      //CB_PrintLineSuccess ("I am a line to print")
+      //
+      Procédure CB_PrintLineSuccess(sLineToPrint is string <useful>)
+      
+      ToastDisplay("Row successfully printed")
+      
+     type : 458752
+   -
+     name : CB_DeselectPrinterSucess
+     procedure_id : 2083914670294339882
+     type_code : 14
+     code : |1+
+      // Summary: Procedure run when the printer is successfully deselected
+      // Syntax:
+      // CB_DeselectPrinterSucess ()
+      //
+      // Parameters:
+      //	None
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // Indicate an example.
+      //
+      Procédure CB_DeselectPrinterSucess()
+      
+      ToastDisplay("Printer successfully deselected")
+      
+      
+     type : 458752
+   -
+     name : CB_RetrieveStatusSuccess
+     internal_properties : CAAAAAgAAADqRTYAs+57GRS0a3mGCAOqpRI+Agbl0TbeMABJmT6iN0CdC4rJGKSZHnYyja5m1V6cLOw1Rt71U5hkbd5URPy91yh6Umxqn7pWHjogAjMcD4wR/zcTdBkm8p86tIlqNFl5qM8F+o9bBDZBb+ABOXRdEgCGw032kaZZRoXxlm4+Lws1be+cf867UX7gaK3p3DXnxFcWCYI=
+     procedure_id : 2083914670294405418
+     type_code : 14
+     code : |1+
+      // Summary: Procedure run when the the status
+      // of the printer is successfully retrieved.
+      // Syntax:
+      //CB_RetrieveStatusSuccess (<sStatus> is string)
+      //
+      // Parameters:
+      //	sStatus (UNICODE string): Printer status
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // CB_RetrieveStatusSuccess("isHeadTooHot = false\nisReceiveBufferFull = false\nisPaperOut = false\nisReadyToPrint = true\nisHeadCold = false\nfriendlyName = ZQ320L\nisPaused = false\nisRibbonOut = false\nisHeadOpen = false\nisPartialFormatInProgress = false")
+      
+      Procédure CB_RetrieveStatusSuccess(sStatus is string)
+      
+      Info("Printer status:" + CR + sStatus)
+     type : 458752
+   -
+     name : CB_PrintZPLStringSuccess
+     procedure_id : 2083914670294470954
+     type_code : 14
+     code : |1+
+      // Summary: Procedure run when a ZPL string is successfully printed
+      // Syntax:
+      //CB_PrintZPLStringSuccess (<sZPLStringToPrint> is string)
+      //
+      // Parameters:
+      //	sZPLStringToPrint (UNICODE string): Content of the string we wanted to print
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // CB_PrintZPLStringSuccess("~TA000~JSN^LT0^MNN^MTD^PON^PMN^LH0,0^JMA^PR5,5~SD10^JUS^LRN^CI0^XZ")
+      //
+      Procédure CB_PrintZPLStringSuccess(sZPLStringToPrint is string <useful>)
+      
+      ToastDisplay("ZPL string successfully printed")
+     type : 458752
+   -
+     name : CB_PrintVariableZPLStringSuccess
+     procedure_id : 2083914670294536490
+     type_code : 14
+     code : |1+
+      // Summary: Procedure run when a ZPL variable string is successfully printed
+      // Syntax:
+      //CB_PrintVariableZPLStringSuccess (<sZPLStringToPrint> is string)
+      //
+      // Parameters:
+      //	sZPLStringToPrint (UNICODE string): <Specify the role of sZPLStringToPrint>
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // CB_PrintVariableZPLStringSuccess("^XA^FT146,306^A0N,28,28^FH\^FD%ATT%^FS^XZ")
+      //
+      Procédure CB_PrintVariableZPLStringSuccess(sZPLStringToPrint is string <useful>)
+      
+      ToastDisplay("ZPL Variable string successfully printed")
+      
+     type : 458752
+   -
+     name : CB_PrintVariableZPLFileSuccess
+     procedure_id : 2083914670294602026
+     type_code : 14
+     code : |1+
+      // Summary: Procedure run when a ZPL variable file is successfully printed
+      // Syntax:
+      //CB_PrintVariableZPLFileSuccess (<sZPLFileToPrint> is string)
+      //
+      // Parameters:
+      //	sFileToPrint (UNICODE string): Name of the file that was just printed
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // CB_PrintVariableZPLFile Success("/sdcard/myfile.zpl")
+      //
+      Procédure CB_PrintVariableZPLFileSuccess(sFileToPrint is string)
+      
+      ToastDisplay("The ZPL Variable file:" + sFileToPrint + " successfully printed")
+     type : 458752
+   -
+     name : CB_PrintTextSuccess
+     procedure_id : 2083914670294667562
+     type_code : 14
+     code : |1+
+      // Summary: Procedure run when a text is successfully printed
+      // Syntax:
+      //CB_PrintTextSuccess (<sTextToPrint> is string)
+      //
+      // Parameters:
+      //	sTextToPrint (UNICODE string): String with the text that was just printed
+      // Return value:
+      // 	None
+      //
+      // Example:
+      // CB_PrintTextSuccess("I am a text\n that was just\n successfully printed")
+      //
+      
+      Procédure CB_PrintTextSuccess(sTexteToPrint is string <useful>)
+      
+      ToastDisplay("Text successfully printed")
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAAB6ragasMBWLfpsSyU19J6lAvYEqFWd1xYOjmHr1XHVZOVmechqLo1vKvfoAJhHeXL59P8BudVQfrBZ/U9vpjDz5RFibMKKm/84EA==
+  original_name : _11
+resources :
+ string_res :
+  identifier : 0x1b42161c004867a2
+  internal_properties : CAAAAAgAAACyXVFaObH4lOGSEHJoZf1MD49w+XTw2LScZCP/urkWFwy+HYJdyQ3umA==
+custom_note :
+ internal_properties : CAAAAAgAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : CAAAAAgAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe
